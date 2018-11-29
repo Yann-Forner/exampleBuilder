@@ -5,6 +5,11 @@ public class mainTest {
         Boat.BoatBuilder test= new Boat.BoatBuilder();
         Boat boat = test.withSize(15).build();
         boat =test.withName("lol").build();
-        boat.show();
+
+        BoatElementVisitor printVisitor = new BoatElementPrintVisitor();
+        BoatElementVisitor doVisitor = new BoatElementDoVisitor();
+
+        printVisitor.visit(boat);
+        doVisitor.visit(boat);
     }
 }

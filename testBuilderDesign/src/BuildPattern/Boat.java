@@ -17,8 +17,16 @@ public class Boat {
         System.out.println(name);
     }
 
+    public int getSize() {
+        return size;
+    }
 
-     static class BoatBuilder {
+    public String getName() {
+        return name;
+    }
+
+
+    static class BoatBuilder {
         Integer size;
         String name="";
 
